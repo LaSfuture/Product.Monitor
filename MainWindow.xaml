@@ -24,7 +24,7 @@
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="675"></RowDefinition>
             <RowDefinition Height="25"></RowDefinition>
         </Grid.RowDefinitions>
         <!--头部-->
@@ -33,17 +33,54 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="60"></ColumnDefinition>
                     <ColumnDefinition Width="Auto"></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition ></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Image Source="/Resource/Images/Product_Title.png" Margin="10,5"/>
                 <StackPanel Grid.Column="1" VerticalAlignment="Center">
                     <TextBlock Text="生产监控平台" Foreground="White" FontSize="16"/>
-                    <TextBlock Text="" Margin="0,2,0,0"/>
+                    <TextBlock Text="It's yourself who stands in the way of your actions." Foreground="White" FontSize="12" Margin="0,2,0,0"/>
                 </StackPanel>
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" WindowChrome.IsHitTestVisibleInChrome="True">
+                        <Button Click="Min_Button_Click" Content="&#xe624;" Style="{StaticResource OperationBtnStyle}"></Button>
+                        <Button Content="&#xe600;" Style="{StaticResource OperationBtnStyle}"></Button>
+                        <Button Click="Close_Button_Click" Content="&#xe609;" Style="{StaticResource OperationBtnStyle}" Background="DarkRed"></Button>
+                    </StackPanel>
+                    <Border Grid.Row="1" BorderThickness="0,1,0,0" BorderBrush="#5518aabd">
+                        <Border.Background>
+                            <VisualBrush TileMode="FlipXY" Viewport="0,0,7,7" ViewportUnits="Absolute">
+                                <VisualBrush.Visual>
+                                    <Line X1="0" Y1="10" X2="10" Y2="0" Height="20" Stroke="Gray" StrokeThickness="1"></Line>
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Border.Background>
+                    </Border>
+                </Grid>
             </Grid>
         </Border>
         <!--内容-->
+        <Grid></Grid>
         <!--底部-->
-        
+        <Border Grid.Row="2" BorderThickness="0,1,0,0" BorderBrush="#5518AABD">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Border BorderThickness="0,1,0,0" BorderBrush="#5518aabd">
+                    <Border.Background>
+                        <VisualBrush TileMode="FlipXY" Viewport="0,0,7,7" ViewportUnits="Absolute">
+                            <VisualBrush.Visual>
+                                <Line X1="0" Y1="10" X2="10" Y2="0" Stroke="Gray" StrokeThickness="1"></Line>
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Border.Background>
+                </Border>
+            </Grid>
+        </Border>
     </Grid>
 </Window>

@@ -20,5 +20,16 @@ namespace ProductMonitor
         {
             InitializeComponent();
         }
+
+        private void Close_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Min_Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
     }
 }
