@@ -9,8 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resource\Fonts\digital_display.ttf" />
+    <None Remove="Resource\Fonts\iconfont.ttf" />
     <None Remove="Resource\Images\Product_Title.png" />
     <None Remove="Resource\Images\Product_Title2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resource\Fonts\iconfont.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resource\Fonts\digital_display.ttf" />
     <Resource Include="Resource\Images\Product_Title.png" />
   </ItemGroup>
 

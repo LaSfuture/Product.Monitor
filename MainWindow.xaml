@@ -35,11 +35,14 @@
                     <ColumnDefinition Width="Auto"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Image Source="/Resource/Images/Product_Title.png" />
+                <Image Source="/Resource/Images/Product_Title.png" Margin="10,5"/>
+                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                    <TextBlock Text="生产监控平台" Foreground="White" FontSize="16"/>
+                    <TextBlock Text="" Margin="0,2,0,0"/>
+                </StackPanel>
             </Grid>
         </Border>
         <!--内容-->
-        
         <!--底部-->
         
     </Grid>
