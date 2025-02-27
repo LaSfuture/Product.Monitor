@@ -11,7 +11,8 @@ namespace ProductMonitor.ViewModels
         private string _timeStr = "";
         private string _dateStr = "";
         private string _weekStr = "";
-        private readonly DispatcherTimer _timer = new();
+        private string _machineCount = "5231";
+        private readonly DispatcherTimer _timer = new(DispatcherPriority.Render);
         private readonly string[] _weekStrs = { "星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六" };
 
         public MainWindowViewModel()
@@ -69,6 +70,19 @@ namespace ProductMonitor.ViewModels
                 {
                     _weekStr = value;
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(WeekStr)));
+                }
+            }
+        }
+
+        public string MachineCount
+        {
+            get => _machineCount;
+            set
+            {
+                if (_machineCount != value)
+                {
+                    _machineCount = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(MachineCount)));
                 }
             }
         }

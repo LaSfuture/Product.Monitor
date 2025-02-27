@@ -28,8 +28,24 @@
                 </StackPanel>
             </StackPanel>
             <!--第二列-->
-            <StackPanel Grid.Column="1" Orientation="Horizontal">
+            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left"> 
+                <!--机台总数-->
                 <TextBlock Text="机台&#13;总数" Margin="10,0,0,0" Foreground="#99ffffff" VerticalAlignment="Center" FontSize="10"></TextBlock>
+                <ItemsControl ItemsSource="{Binding MachineCount}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"></StackPanel>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Width="15" Background="#3318aabd" Margin="2,0">
+                                <TextBlock Text="{Binding}" VerticalAlignment="Center" 
+                                           TextAlignment="Center" Foreground="White" FontSize="16"></TextBlock>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </StackPanel>
         </Grid>
     </Grid>
